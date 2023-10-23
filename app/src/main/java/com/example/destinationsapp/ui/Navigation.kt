@@ -1,5 +1,6 @@
 package com.example.destinationsapp.ui
 
+import android.content.Context
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -16,7 +17,7 @@ enum class Screens {
 }
 
 @Composable
-fun Nav() {
+fun Nav(context: Context) {
     val navController = rememberNavController()
     val viewModel = DestinationViewModel()
     val state by viewModel.state.collectAsState()
@@ -44,7 +45,14 @@ fun Nav() {
         }
         composable(Screens.Detail.name) {
             DetailScreen(
-                state = state,
+                selectedDestination = state.selectedDestination!!,
+                onNavigateBack = {
+                    navController.popBackStack()
+                },
+                clickedLike = {
+                    viewModel.clickedLike()
+                },
+                context = context,
             )
         }
     }

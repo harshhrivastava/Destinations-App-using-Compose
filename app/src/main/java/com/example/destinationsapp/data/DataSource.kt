@@ -9,6 +9,8 @@ class DestinationData {
         return if(query != null) {
             destinationsList.filter {
                 it.destinationType.name == query
+            }.sortedBy {
+                it.isFav
             }
         } else {
             destinationsList

@@ -15,6 +15,7 @@ val destinationsList: List<Destination> = listOf(
         withGuide = true,
         destinationType = DestinationType.Beach,
         image = R.drawable.image1,
+        isFav = false,
     ),
     Destination(
         name = "Lorem Ipsum",
@@ -26,6 +27,7 @@ val destinationsList: List<Destination> = listOf(
         withGuide = true,
         destinationType = DestinationType.Beach,
         image = R.drawable.image2,
+        isFav = false,
     ),
     Destination(
         name = "Lorem Ipsum",
@@ -37,6 +39,7 @@ val destinationsList: List<Destination> = listOf(
         withGuide = true,
         destinationType = DestinationType.Beach,
         image = R.drawable.image3,
+        isFav = false,
     ),
     Destination(
         name = "Lorem Ipsum",
@@ -48,6 +51,7 @@ val destinationsList: List<Destination> = listOf(
         withGuide = true,
         destinationType = DestinationType.Hotel,
         image = R.drawable.image4,
+        isFav = false,
     ),
     Destination(
         name = "Lorem Ipsum",
@@ -59,6 +63,7 @@ val destinationsList: List<Destination> = listOf(
         withGuide = true,
         destinationType = DestinationType.Hotel,
         image = R.drawable.image5,
+        isFav = false,
     ),
     Destination(
         name = "Lorem Ipsum",
@@ -70,6 +75,7 @@ val destinationsList: List<Destination> = listOf(
         withGuide = true,
         destinationType = DestinationType.Hotel,
         image = R.drawable.image6,
+        isFav = false,
     ),
     Destination(
         name = "Lorem Ipsum",
@@ -81,6 +87,7 @@ val destinationsList: List<Destination> = listOf(
         withGuide = true,
         destinationType = DestinationType.Mountain,
         image = R.drawable.image7,
+        isFav = false,
     ),
     Destination(
         name = "Lorem Ipsum",
@@ -92,6 +99,7 @@ val destinationsList: List<Destination> = listOf(
         withGuide = true,
         destinationType = DestinationType.Mountain,
         image = R.drawable.image8,
+        isFav = false,
     ),
     Destination(
         name = "Lorem Ipsum",
@@ -103,5 +111,6 @@ val destinationsList: List<Destination> = listOf(
         withGuide = true,
         destinationType = DestinationType.Mountain,
         image = R.drawable.image9,
+        isFav = false,
     ),
 )

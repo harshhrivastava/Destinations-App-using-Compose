@@ -33,6 +33,18 @@ class DestinationViewModel : ViewModel() {
         }
     }
 
+    fun clickedLike() {
+        viewModelScope.launch {
+            _state.update {
+                it.copy(
+                    selectedDestination = it.selectedDestination?.copy(
+                        isFav = it.selectedDestination.isFav.not()
+                    )
+                )
+            }
+        }
+    }
+
     fun filter(
         query: String?,
     ): List<Destination> {

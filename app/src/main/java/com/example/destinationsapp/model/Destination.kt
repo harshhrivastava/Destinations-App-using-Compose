@@ -10,6 +10,7 @@ data class Destination(
     val withGuide: Boolean,
     val destinationType: DestinationType,
     val image: Int,
+    val isFav: Boolean = false,
 )
 
 enum class DestinationType {
