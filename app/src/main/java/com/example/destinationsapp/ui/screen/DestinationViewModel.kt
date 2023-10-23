@@ -4,7 +4,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.destinationsapp.data.DestinationData
 import com.example.destinationsapp.model.Destination
-import com.example.destinationsapp.model.DestinationType
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -35,7 +34,7 @@ class DestinationViewModel : ViewModel() {
     }
 
     fun filter(
-        query: DestinationType?,
+        query: String?,
     ): List<Destination> {
         return destinationData.getData(query)
     }

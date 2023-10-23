@@ -33,13 +33,12 @@ fun Nav() {
         }
         composable(Screens.Search.name) {
             SearchScreen(
-                state = state,
                 navigateToDetailScreen = { destination ->
                     viewModel.setDestination(destination)
                     navController.navigate(Screens.Detail.name)
                 },
                 filter = { destinationType ->
-                    viewModel.filter(destinationType)
+                    return@SearchScreen viewModel.filter(destinationType)
                 },
             )
         }

@@ -1,5 +1,6 @@
 package com.example.destinationsapp.ui.screen
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -33,6 +34,7 @@ import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
 import com.example.destinationsapp.R
 import com.example.destinationsapp.ui.theme.DestinationsAppTheme
+import com.example.destinationsapp.ui.theme.kPrimaryColor
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -84,23 +86,29 @@ fun HomeScreen(
             ) {
                 Text(
                     text = "Explore Various Natural Beauty of Indonesia",
-                    style = MaterialTheme.typography.displaySmall,
+                    style = MaterialTheme.typography.headlineMedium,
                     textAlign = TextAlign.Center,
-                    fontWeight = FontWeight.SemiBold
+                    fontWeight = FontWeight.SemiBold,
+                    modifier = Modifier.padding(vertical = 8.dp),
                 )
                 Text(
-                    text = "you can visit anywhere easily, order your ticket now to get lots of promos",
+                    text = "you can visit anywhere easily, order your ticket\nnow to get lots of promos",
                     textAlign = TextAlign.Center,
-                    style = MaterialTheme.typography.bodyLarge,
+                    style = MaterialTheme.typography.bodyMedium,
                     color = Color.Gray,
+                    modifier = Modifier.padding(vertical = 8.dp),
                 )
                 OutlinedButton(
                     onClick = {
                         onNext()
                     },
                     colors = ButtonDefaults.outlinedButtonColors(
-                        containerColor = Color.Blue,
+                        containerColor = kPrimaryColor,
                         contentColor = Color.White,
+                    ),
+                    border = BorderStroke(
+                        width = 0.dp,
+                        color = Color.Transparent
                     ),
                     modifier = Modifier
                         .padding(16.dp)
